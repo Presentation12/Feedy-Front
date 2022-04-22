@@ -1,0 +1,252 @@
+body,html
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: linear-gradient(to top left, #7a1714 0%, #5C2976 100%);
+  font-family: Poppins-Regular, sans-serif;
+}
+
+main
+{
+  display: flex;
+  box-shadow: 0 0px 50px 0px;
+  position: relative;
+}
+
+.content
+{
+  height: 600px;
+  width: 450px;
+  background-color: rgba(255, 255, 255);
+
+  flex-direction: row;
+  align-items:center;
+  display: flex;
+  text-align: center; 
+}
+
+.reg
+{
+  height: 600px;
+  width: 450px;
+  background-color: rgba(255, 255, 255);
+}
+
+.log
+{
+  height: 600px;
+  width: 450px;
+  background-color: rgba(255, 255, 255);
+}
+
+.image
+{
+  height: 300px;
+  width: 225px;
+}
+
+.inputs
+{
+  margin-top: 90px;
+}
+
+.pass
+{
+  position:relative;
+}
+
+ .pass span
+{
+  position:fixed;
+  margin-top: 3%;
+  margin-left: -4%;
+}
+
+.logo
+{
+  width: 200px;
+  margin-top: -20%;
+}
+
+.image
+{
+  height: 600px;
+  width: 450px;
+}
+
+.eye
+{
+  margin: 0 -35px -8px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+
+input:not([type="checkbox"])
+{
+
+  width: 250px;
+  margin-top: 10px;
+  padding: 7px;    
+  border: 1px solid #242424;
+  border-radius: 10px;
+
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+input[type="submit"]
+{  
+  width: 90px;
+  cursor: pointer;  
+  background: #5C2976;
+  color: #fff;
+  font-size: 13px;  
+  font-weight:bold;  
+  text-shadow: 0 1px 1px #333;
+  border-radius: 20px;
+  margin: 0 8px;
+
+  transition: all 0.2s linear;
+}
+
+input[type="submit"]:hover
+{
+  background-color: rgb(255, 255, 255);
+  color:#5C2976;
+  border-color: #5C2976;
+}
+
+a[href="#recuperarPass"]
+{
+    color: #555555;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+a[href="#recuperarPass"]:hover
+{
+  color:#5C2976;
+}
+
+.link
+{
+  height: 40px;
+  width: 450px;
+  background-color: #5C2976;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.link a
+{
+  font-weight: bold;
+
+  color: #ffffff;
+  margin-left: 10px;
+  border: 1px solid #5C2976;
+  padding: 3px;
+ 
+  -webkit-border-radius: 4px;
+  border-radius: 10px;  
+  text-decoration: none;
+ 
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s  linear;
+}
+
+.link a:hover {
+  color:  #5C2976;
+  background: #f7f7f7;
+}
+
+#registo, 
+#login{
+  position:fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:inherit;
+
+  background: #ffffff;
+
+   
+  -webkit-box-shadow: 5px;
+  border-radius: 5px;
+   
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+ 
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+/* Efeito ao clicar no botão ( Login ) */
+#pararegisto:target ~ .content #registo,
+#paralogin:target ~ .content #login{
+  z-index: 2;
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+ 
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
+}
+ 
+/* Efeito ao clicar no botão ( Registo ) */
+#registro:target ~ .content #login,
+#paralogin:target ~ .content #registo{
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+/*fadeInLeft*/
+@-webkit-keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+    }
+  }
+   
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+   
+  /*fadeOutLeft*/
+  @-webkit-keyframes fadeOutLeft {
+    0% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translateX(-20px);
+    }
+  }
+   
+  @keyframes fadeOutLeft {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+  }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Login e Registo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" type="text/css" href="teste.css" />
+</head>
+  <body>
+      <main>
+        <a class="links" id="pararegisto"></a>
+        <a class="links" id="paralogin"></a>
+
+        <div class="content">   
+
+            <!--LOGIN-->
+                <div id="login" class="log">
+                  <form method="post" action=""> 
+
+                    <img src="ola.png" class="logo">
+
+                    <div class="inputs"> 
+                      <input required="required" type="text" placeholder="Codigo clinico"/>   
+                    </div>
+
+                    <div class="pass"> 
+                      <input id="pass" required="required" type="password" placeholder="Palavra-passe">
+                      <span type="image" onclick="mostraPass()"><img class="eye" src="eye.png"/span>
+                    </div>
+                    
+                    <p> 
+                      <input type="submit" value="Entrar" /> 
+                    </p>
+
+                    <div id="recuperarPass"> 
+                      <a href="#recuperarPass">Esqueci-me da palavra passe</a>
+                    </div>
+
+                    <footer class="link">
+                      Ainda não somos parceiros?
+                      <a href="#pararegisto">Registar</a> 
+                    </footer>
+
+                  </form>
+                </div>
+
+            <!--REGISTO-->
+                <div id="registo" class="reg">
+                  <form method="post" action="">
+
+                    <img src="ola.png" class="logo">
+
+                    <div class="inputs"> 
+                      <input required="required" type="email" placeholder="E-mail" /> 
+                      <input required="required" type="tel" placeholder="Contacto"/>
+                    </div>
+
+                    <p> 
+                      <input type="submit" value="Registar" /> 
+                    </p>
+
+                    <footer class="link">
+                      Jà somos parceiros?
+                      <a href="#paralogin">Login</a> 
+                    </footer>
+
+                  </form>
+                </div>
+          </div>
+
+          <div class="content">
+            <img src="1.png" class="image">
+          </div>
+
+      </main>
+      <script src="teste.js"></script>
+  </body>
+</html>
