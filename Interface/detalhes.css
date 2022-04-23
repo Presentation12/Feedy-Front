@@ -52,6 +52,12 @@ input[type="submit"]
   transition: all 0.2s linear;
 }
 
+input[type="submit"]:hover
+{
+    background:#fff;
+    color: #5C2976;
+}
+
 .sidebar
 {
   background: #F1F1F1;
@@ -137,24 +143,42 @@ input[type="submit"]
   line-height: 28px;
 }
 
-.edit
+.foto
 {
-    width: 120px;
-    height: 120px;
-    object-fit: cover; /*recortar foto*/
-    object-position:top;
-    border-radius: 10%;
-    cursor: pointer;
-    margin-left: 1%; /*espaço das palavras a foto*/
+  width: 120px;
+  height: 120px;
+  object-fit: cover; /*recortar foto*/
+  object-position:top;
+  border-radius: 10%;
+  cursor: pointer;
+  margin-left: 1%; /*espaço das palavras a foto*/
+  transition: 0.5s; /*transição do claro para o normal*/
 }
 
-.edit:hover
+.foto:hover
 {
     opacity: 0.8;
 }
 
+.edit
+{
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  margin-left: -44%; /*espaço das palavras a foto*/
+  margin-bottom: 5%;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.edit:hover
+{
+    opacity: 0.4;
+}
+
 .tit
 {
+    border-top: #000000;
     margin-top: 3%;
     font-weight: 600;
 }
