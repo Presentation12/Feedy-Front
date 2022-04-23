@@ -1,0 +1,165 @@
+*{
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins-Regular, sans-serif;
+}
+
+body
+{
+  background: #ffffff;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input:not([type="checkbox"])
+{
+
+  width: 250px;
+  padding: 7px;  
+  margin-bottom: 15px;  
+  border: 1px solid #242424;
+  border-radius: 10px;
+
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+/* cor do texto interior da caixa de texto*/
+.non input::placeholder
+{
+    color: #000000;
+}
+
+input[type="submit"]
+{  
+  width: 90px;
+  cursor: pointer;  
+  background: #5C2976;
+  color: #fff;
+  font-size: 13px;  
+  font-weight:bold;  
+  text-shadow: 0 1px 1px #333;
+  border-radius: 20px;
+  margin: 0px;
+
+  transition: all 0.2s linear;
+}
+
+.sidebar
+{
+  background: #F1F1F1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 225px;
+  height: 100%;
+  padding: 25px 0;
+  transition: all 0.5s ease;
+}
+
+.logo
+{
+  margin-bottom: 30px;
+  text-align: center;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.sidebar ul li a
+{
+  display: block;
+  padding: 13px 40px;
+  color: #242424;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  margin: 5%;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active
+{
+  color: #5C2976;
+  background:#D9D9D9;
+}
+
+.sidebar ul li a:hover:before,
+.sidebar ul li a.active:before
+{
+    display: block;
+}
+
+.section
+{
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+}
+
+.top_navbar
+{
+    color: #242424;
+    height: 50px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    padding: 0 20px;
+}
+
+
+.perfil
+{
+    width: 40px;
+    height: 40px;
+    object-fit: cover; /*recortar foto*/
+    object-position:top;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 1%; /*espaço das palavras a foto*/
+}
+
+
+.container
+{
+    position: absolute;
+  margin: 30px;
+  background: #fff;
+  padding: 50px;
+  line-height: 28px;
+}
+
+.edit
+{
+    width: 120px;
+    height: 120px;
+    object-fit: cover; /*recortar foto*/
+    object-position:top;
+    border-radius: 10%;
+    cursor: pointer;
+    margin-left: 1%; /*espaço das palavras a foto*/
+}
+
+.edit:hover
+{
+    opacity: 0.8;
+}
+
+.tit
+{
+    margin-top: 3%;
+    font-weight: 600;
+}
+
+.sub
+{
+    font-size: 14px;
+}
