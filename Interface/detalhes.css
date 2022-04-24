@@ -1,4 +1,4 @@
-*{
+* {
   list-style: none;
   text-decoration: none;
   margin: 0;
@@ -7,8 +7,7 @@
   font-family: Poppins-Regular, sans-serif;
 }
 
-body
-{
+body {
   background: #ffffff;
   list-style: none;
   text-decoration: none;
@@ -18,48 +17,51 @@ body
   font-family: 'Open Sans', sans-serif;
 }
 
-input:not([type="checkbox"])
-{
+/*SIDE BAR*/
+
+input:not([type="checkbox"]) {
 
   width: 250px;
-  padding: 7px;  
-  margin-bottom: 15px;  
-  border: 1px solid #242424;
+  padding: 7px;
+  margin-bottom: 15px;
+  background-color:#D9D9D9;
+  border:none;
   border-radius: 10px;
 
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
-/* cor do texto interior da caixa de texto*/
-.non input::placeholder
-{
-    color: #000000;
-}
-
-input[type="submit"]
-{  
+input[type="submit"] {
   width: 90px;
-  cursor: pointer;  
-  background: #5C2976;
-  color: #fff;
-  font-size: 13px;  
-  font-weight:bold;  
-  text-shadow: 0 1px 1px #333;
+  cursor: pointer;
+  color: #5C2976;
+  background-color: #fff;
+  border: 2px solid #5C2976;
+  font-size: 13px;
+  font-weight: bold;
   border-radius: 20px;
-  margin: 0px;
-
-  transition: all 0.2s linear;
+  margin-bottom: 0;
 }
 
-input[type="submit"]:hover
-{
-    background:#fff;
-    color: #5C2976;
+input[type="submit"]:hover {
+  background: #5C2976;
+  color: #ffffff;
 }
 
-.sidebar
+.submits
 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editar
+{
+  margin-right: 70px;
+}
+
+.sidebar {
   background: #F1F1F1;
   position: fixed;
   top: 0;
@@ -70,8 +72,7 @@ input[type="submit"]:hover
   transition: all 0.5s ease;
 }
 
-.logo
-{
+.logo {
   margin-bottom: 30px;
   text-align: center;
   display: block;
@@ -80,8 +81,7 @@ input[type="submit"]:hover
   margin: 0 auto;
 }
 
-.sidebar ul li a
-{
+.sidebar ul li a {
   display: block;
   padding: 13px 40px;
   color: #242424;
@@ -92,98 +92,131 @@ input[type="submit"]:hover
 }
 
 .sidebar ul li a:hover,
-.sidebar ul li a.active
-{
+.sidebar ul li a.active {
   color: #5C2976;
-  background:#D9D9D9;
+  background: #D9D9D9;
 }
 
 .sidebar ul li a:hover:before,
-.sidebar ul li a.active:before
-{
-    display: block;
+.sidebar ul li a.active:before {
+  display: block;
 }
 
-.section
-{
-    width: calc(100% - 225px);
-    margin-left: 225px;
-    transition: all 0.5s ease;
+/*TOP BAR*/
+
+.section {
+  width: calc(100% - 225px);
+  margin-left: 225px;
+  transition: all 0.5s ease;
 }
 
-.top_navbar
-{
-    color: #242424;
-    height: 50px;
-    display: flex;
-    justify-content:flex-end;
-    align-items: center;
-    padding: 0 20px;
+.top_navbar {
+  color: #242424;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.dropMenu  ul{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #F1F1F1;
+  width: 180px;
+  height: 100px;
+  border-radius: 10%;
+  margin-top: 35%;
+  margin-left: 20%;
+}
+
+.dropMenu  a {
+  color: #242424;
+  font-size: 14px;
+  position: relative;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.dropMenu a:hover,
+.dropMenu a.active {
+  color: #5C2976;
+  font-weight: 600;
 }
 
 
-.perfil
-{
-    width: 40px;
-    height: 40px;
-    object-fit: cover; /*recortar foto*/
-    object-position:top;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-left: 1%; /*espaço das palavras a foto*/
+.img_perfil {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+  /*recortar foto*/
+  border-radius: 50%;
+  cursor: pointer;
+  /*espaço das palavras a foto*/
+  transition: .5s;
+}
+
+.img_perfil:hover {
+  opacity: 0.8;
 }
 
 
-.container
-{
-    position: absolute;
-  margin: 30px;
-  background: #fff;
+
+/*CONTAINER*/
+
+.container {
+  position: absolute;
+  margin-left: 30px;
   padding: 50px;
   line-height: 28px;
 }
 
-.foto
-{
+.foto {
   width: 120px;
   height: 120px;
-  object-fit: cover; /*recortar foto*/
-  object-position:top;
+  object-fit: cover;
+  /*recortar foto*/
+  object-position: center;
   border-radius: 10%;
   cursor: pointer;
-  margin-left: 1%; /*espaço das palavras a foto*/
-  transition: 0.5s; /*transição do claro para o normal*/
+  margin-left: 1%;
+  /*espaço das palavras a foto*/
+  transition: 0.5s;
+  /*transição do claro para o normal*/
 }
 
-.foto:hover
-{
-    opacity: 0.8;
+.foto:hover {
+  opacity: 0.8;
 }
 
-.edit
-{
+.edit {
   width: 100px;
   height: 100px;
   cursor: pointer;
-  margin-left: -44%; /*espaço das palavras a foto*/
+  margin-left: -44%;
+  /*espaço das palavras a foto*/
   margin-bottom: 5%;
   transition: 0.5s;
   opacity: 0;
 }
 
-.edit:hover
-{
-    opacity: 0.4;
+.edit:hover {
+  opacity: 0.3;
+}
+
+h3 {
+  margin-top: 5%;
+  font-weight:bold;
+  border-top: #000000;
 }
 
 .tit
 {
-    border-top: #000000;
-    margin-top: 3%;
-    font-weight: 600;
+  margin-top: 15%;
 }
 
-.sub
-{
-    font-size: 14px;
+.sub {
+  font-size: 14px;
 }

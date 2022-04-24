@@ -16,59 +16,72 @@
 <body>
    
     <div class="section">
-
+        
         <div class="top_navbar">
-            Dr. Doofenshmirtz
-            <img src="imagens/gajo.png" class="perfil">
+            <div class="dropMenu">
+                <ul>
+                    <a href="#" class="active">Perfil</a>
+                    <a href="#">Ajuda</a>
+                    <a href="#">Definições</a>
+                    <a href="#">Terminar Sessão</a>
+                </ul>
+            </div>
+            <img src="imagens/gajo.jpg" class="img_perfil">
         </div>
 
+
         <div class="container">
-            <img src="imagens/gajo.png" class="foto">
+            <img src="imagens/gajo.jpg" class="foto">
             <img src="imagens/edit.svg" class="edit">
-            <p class="tit">Informação pessoal</p>
+            <h3>Informação pessoal</h3>
+            <hr>
             <div class="inputs"> 
                 <p class="sub">Nome</p>
-                <input type="text" placeholder="Doofenshmirtz"/>   
+                <input id="nome" type="text" placeholder="Pedro" disabled="true"/>   
             </div>
             <div class="inputs"> 
                 <p class="sub">Apelido</p>
-                <input type="text" placeholder="Beterraba"/>   
+                <input id="apelido" type="text" placeholder="Simões" disabled="true"/>   
             </div>
             <div class="inputs"> 
                 <p class="sub">E-mail</p>
-                <input type="email" placeholder="doof2001@gmail.com"/>   
+                <input id="email" type="email" placeholder="playdagame@gmail.com" disabled="true"/>   
             </div>
             <div class="inputs"> 
                 <p class="sub">Contacto</p>
-                <input type="tel" placeholder="911252433"/>   
+                <input id="contacto" type="tel" placeholder="911252433" disabled="true"/>   
             </div>
-            <div class="non"> 
+            <div class="inputs"> 
                 <p class="sub">Clinica</p>
-                <input type="text" placeholder="S.Pedro" readonly/>   
+                <input type="text" placeholder="S.Pedro" disabled="true"/>   
             </div>
-            <div class="non"> 
+            <div class="inputs"> 
                 <p class="sub">Código</p>
-                <input type="number" placeholder="12345" readonly/>   
+                <input type="number" placeholder="12345" disabled="true"/>   
             </div>
-            <div>
-                <input type="submit" value="Editar" /> 
-                <input type="submit" value="Guardar" />
+            <div class="submits">
+                <input type="submit" class="editar" value="Editar" onclick="editable()"/> 
+                <input type="submit" value="Guardar" onclick="noneditable()"/>
             </div>
 
-            <p class="tit">Alteração de palavra-passe</p>
+            <h3 class="tit">Alteração de palavra-passe</h3>
+            <hr>
             <div class="pass"> 
                 <p class="sub">Nova palavra-passe</p>
                 <input id="pass" required="required" type="password" placeholder="Palavra-passe">
-                </div>
+            </div>
+            <div>
+                <input type="checkbox" onclick="mostraPass('pass')">Mostrar
+            </div>
             <div class="pass"> 
                 <p class="sub">Confirmação palavra-passe</p>
-                <input id="pass" required="required" type="password" placeholder="Palavra-passe">
+                <input id="pass2" required="required" type="password" placeholder="Palavra-passe">
             </div>
             <div>
-                <input type="checkbox" onclick="mostraPass()">Mostrar</span>
+                <input type="checkbox" onclick="mostraPass('pass2')">Mostrar
             </div>
-            <div>
-                <input type="submit" value="Editar" /> 
+            <div class="submits">
+                <input type="submit" class="editar" value="Editar" /> 
                 <input type="submit" value="Guardar" />
             </div>
         </div>
