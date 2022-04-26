@@ -1,50 +1,39 @@
 :root {
-    --light-body: #f3f8fe;
-    --light-main: #fdfdfd;
-    --light-second: #c3c2c8;
-    --light-hover: #edf0f5;
-    --light-text: #151426;
-
-    --blue: #5C2976;
+    --purple: #5C2976;
     --white: #fff;
-
-    --font-family: cursive;
+    --gray: #242424;
 }
 
-.light {
-    --bg-body: var(--light-body);
-    --bg-main: var(--light-main);
-    --bg-second: var(--light-second);
-    --color-hover: var(--light-hover);
-    --color-txt: var(--light-text);
-}
-
+/* Calendario todo */
 .calendar {
-    border: 10px solid #5C2976;
+    border: 10px solid var(--purple);
     height: max-content;
     width: max-content;
-    background-color: var(--bg-main);
+    background-color: var(--white);
     border-radius: 30px;
-    padding: 20px;
+    padding: 20px; /* Distancia entre elementos */
     position: relative;
     overflow: hidden;
-    /* transform: scale(1.25); */
 }
 
+/* Cabeçalho */
 .calendar-header {
+    color: var(--purple);
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 25px;
     font-weight: 600;
-    color: var(--color-txt);
     padding: 10px;
 }
 
+/* Quadrado que inclui dias da semana e dias */
 .calendar-body {
+    color: var(--purple);
     padding: 10px;
 }
 
+/* Quadrado que inclui dias da semana*/
 .calendar-week-day {
     height: 50px;
     display: grid;
@@ -55,16 +44,17 @@
 .calendar-week-day div {
     display: grid;
     place-items: center;
-    color: var(--bg-second);
 }
 
+/* Quadrado que inclui todo os dias */
 .calendar-days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 2px;
-    color: var(--color-txt);
+    color: var(--gray);
 }
 
+/* Quadrado de cada dia*/
 .calendar-days div {
     width: 50px;
     height: 50px;
@@ -75,82 +65,17 @@
     position: relative;
     cursor: pointer;
     animation: to-top 1s forwards;
-    /* border-radius: 50%; */
 }
 
 .calendar-days div:hover{
-    border: 3px solid #5C2976;
+    background-color: #F1F1F1;
     border-radius: 50%;
-    transition: .8s;
 }
 
-.calendar-days div span {
-    position: absolute;
-}
-
-.calendar-days div:hover span {
-    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
-}
-
-.calendar-days div span:nth-child(1),
-.calendar-days div span:nth-child(3) {
-    width: 2px;
-    height: 0;
-    background-color: var(--color-txt);
-}
-
-.calendar-days div:hover span:nth-child(1),
-.calendar-days div:hover span:nth-child(3) {
-    height: 100%;
-}
-
-.calendar-days div span:nth-child(1) {
-    bottom: 0;
-    left: 0;
-}
-
-.calendar-days div span:nth-child(3) {
-    top: 0;
-    right: 0;
-}
-
-.calendar-days div span:nth-child(2),
-.calendar-days div span:nth-child(4) {
-    width: 0;
-    height: 2px;
-    background-color: var(--color-txt);
-}
-
-.calendar-days div:hover span:nth-child(2),
-.calendar-days div:hover span:nth-child(4) {
-    width: 100%;
-}
-
-.calendar-days div span:nth-child(2) {
-    top: 0;
-    left: 0;
-}
-
-.calendar-days div span:nth-child(4) {
-    bottom: 0;
-    right: 0;
-}
-
-.calendar-days div:hover span:nth-child(2) {
-    transition-delay: 0.2s;
-}
-
-.calendar-days div:hover span:nth-child(3) {
-    transition-delay: 0.4s;
-}
-
-.calendar-days div:hover span:nth-child(4) {
-    transition-delay: 0.6s;
-}
-
+/* Dia atual */
 .calendar-days div.curr-date,
 .calendar-days div.curr-date:hover {
-    background-color: var(--blue);
+    background-color: var(--purple);
     color: var(--white);
     border-radius: 50%;
 }
@@ -159,6 +84,7 @@
     display: none;
 }
 
+/* Quadrado do mes */
 .month-picker {
     padding: 5px 10px;
     border-radius: 10px;
@@ -166,14 +92,17 @@
 }
 
 .month-picker:hover {
-    background-color: var(--color-hover);
+    background-color: var(--purple);
+    color: var(--white);
 }
 
+/* Quadrado que inclui setas e ano */
 .year-picker {
     display: flex;
     align-items: center;
 }
 
+/* Quadrado da seta */
 .year-change {
     height: 40px;
     width: 40px;
@@ -185,32 +114,18 @@
 }
 
 .year-change:hover {
-    background-color: var(--color-hover);
+    background-color: var(--purple);
+    color: var(--white);
 }
 
-.calendar-footer {
-    padding: 10px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.toggle {
-    display: flex;
-}
-
-.toggle span {
-    margin-right: 10px;
-    color: var(--color-txt);
-}
-
+/*  */
 .month-list {
+    font-weight: 600;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background-color: var(--bg-main);
     padding: 20px;
     grid-template-columns: repeat(3, auto);
     gap: 5px;
@@ -220,32 +135,36 @@
     pointer-events: none;
 }
 
+/* Quadrado de todos os meses */
 .month-list.show {
     transform: scale(1);
-    background-color: #ffffff;
+    background-color: var(--white);
     visibility: visible;
     pointer-events: visible;
     transition: all 0.2s ease-in-out;
 }
-
+/* Quadrado de cada mes */
 .month-list > div {
     display: grid;
     place-items: center;
 }
-
+/* Quadrado de cada mes */
 .month-list > div > div {
     width: 100%;
     padding: 5px 20px;
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
-    color: var(--color-txt);
+    color: var(--gray);
 }
 
 .month-list > div > div:hover {
-    background-color: var(--color-hover);
+    background-color: var(--purple);
+    color: var(--white);
 }
 
+
+/* Animação dos dias a subir */
 @keyframes to-top {
     0% {
         transform: translateY(100%);
