@@ -1,10 +1,12 @@
 <!--Design by foolishdeveloper.com-->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
+
 <head>
     <link rel="stylesheet" href="agenda.css">
-    <link rel="shortcut icon" href="imagens/icon.svg"/>
+    <link rel="shortcut icon" href="imagens/icon.svg" />
+    <link rel="stylesheet" href="agenda_calendario.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +15,11 @@
 
     </style>
 </head>
+
 <body>
-   
+
     <div class="section">
-        
+
         <div class="top_navbar">
             <div class="dropMenu">
                 <ul>
@@ -30,10 +33,39 @@
         </div>
 
         <div class="container">
-            <div class="calendario">
-                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FLisbon&showNav=1&showTitle=0&showDate=1&showTabs=1&showCalendars=1&showTz=0&src=djVqN2IwbDhkYTNya3Mwc2cybms5amFhbmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23616161" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>        </div>
+
+            <div class="calendar">
+
+                <div class="calendar-header">
+                    <span class="month-picker" id="month-picker"></span>
+                    <div class="year-picker">
+                        <span class="year-change" id="prev-year">
+                            <pre><</pre>
+                        </span>
+                        <span id="year"></span>
+                        <span class="year-change" id="next-year">
+                            <pre>></pre>
+                        </span>
+                    </div>
+                </div>
+        
+                <div class="calendar-body">
+                    <div class="calendar-week-day">
+                        <div>Dom</div>
+                        <div>Seg</div>
+                        <div>Ter</div>
+                        <div>Qua</div>
+                        <div>Qui</div>
+                        <div>Sex</div>
+                        <div>Sab</div>
+                    </div>
+                    <div class="calendar-days"></div>
+                </div>
+        
+                <div class="month-list"></div>
             </div>
         </div>
+    </div>
 
     <div class="sidebar">
         <img src="imagens/logo.svg" class="logo">
@@ -60,7 +92,9 @@
             </li>
         </ul>
     </div>
-    
+
     <script src="funcoes.js"></script>
+    <script src="agenda_calendario.js"></script>
 </body>
+
 </html>
