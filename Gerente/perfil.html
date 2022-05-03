@@ -18,15 +18,18 @@
     <div class="section">
         
         <div class="top_navbar">
-            <div class="dropMenu">
-                <ul>
-                    <a href="#" class="active">Perfil</a>
-                    <a href="#">Ajuda</a>
-                    <a href="#">Definições</a>
-                    <a href="#">Terminar Sessão</a>
-                </ul>
+            <a>Nome User</a>
+            <div class = "dropdown" style="float:right;">
+                <img src="imagens/gajo.jpg" class="perfil">
+                <div class="dropdown-content">
+                    <a href="http://127.0.0.1:3003/perfil.html">Editar Perfil</a>
+                    <a href="#">Pagamentos</a>
+                    <a href="#">Encomendas</a>
+                    <a href="http://127.0.0.1:3003/ajuda.html">Ajuda</a>
+                    <a href="http://127.0.0.1:3003/definicoes.html">Definições</a>
+                    <a href="#">Sair</a> 
+                </div>
             </div>
-            <img src="imagens/gajo.jpg" class="img_perfil">
         </div>
 
 
@@ -91,26 +94,34 @@
         <img src="imagens/logo.svg" class="logo">
         <ul>
             <li>
-                <a href="http://127.0.0.1:3000/inicio.html">
+                <a href="#">
                     <span class="item">Inicio</span>
                 </a>
             </li>
             <li>
-                <a href="http://127.0.0.1:3000/agenda.html">
+                <a href="http://127.0.0.1:3003/agenda.html">
                     <span class="item">Agenda</span>
                 </a>
             </li>
             <li>
-                <a href="http://127.0.0.1:3000/animais.html">
+                <a href="#">
                     <span class="item">Animais</span>
                 </a>
             </li>
-            <li>
-                <a href="http://127.0.0.1:3000/perfil.html" class="active">
-                    <span class="item">Perfil</span>
-                </a>
-            </li>
         </ul>
+
+        <div class="dicasConteiner">
+
+            <div class="dicas" id="dicas">
+
+                <div class="slider-dica">
+                    <h4>Dica</h4>
+                    <p>Lave o seu cão diariamente</p>
+                </div>
+
+            </div>
+        </div>
+        
     </div>
     
     <script src="js/funcoes.js"></script>
