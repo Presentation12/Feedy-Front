@@ -1,0 +1,48 @@
+:root {
+    --purple: #5C2976;
+    --white: #fff;
+    --whitegray:#F1F1F1;
+    --gray: #D9D9D9;
+    --grayblack: #242424;
+    --black: rgb(0, 0, 0);
+  }
+
+.container {
+    position: absolute;
+    margin-left: 30px;
+    padding: 50px;
+    line-height: 28px;
+  }
+
+  h3 {
+    margin-top: 5%;
+    font-weight:bold;
+    border-top: var(--black)
+  }
+
+  .checkboxs
+  {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      margin-bottom: 70px;
+  }
+
+  input[type="submit"] {
+    margin-top: 10px;
+    width: 80px;
+    height: 25px;
+    cursor: pointer;
+    color: var(--purple);
+    background-color: var(--white);
+    border: 2px solid var(--purple);
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-bottom: 0;
+  }
+  
+  input[type="submit"]:hover {
+    background: var(--purple);
+    color: var(--white);
+  }
