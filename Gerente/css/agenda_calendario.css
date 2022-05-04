@@ -1,7 +1,7 @@
 :root {
     --purple: #5C2976;
     --white: #fff;
-    --gray: #242424;
+    --grayblack: #242424;
 }
 
 /* Calendario todo */
@@ -51,7 +51,7 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 2px;
-    color: var(--gray);
+    color: var(--grayblack);
 }
 
 /* Quadrado de cada dia*/
@@ -155,7 +155,7 @@
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
-    color: var(--gray);
+    color: var(--grayblack);
 }
 
 .month-list > div > div:hover {

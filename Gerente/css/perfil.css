@@ -1,10 +1,18 @@
+:root {
+  --purple: #5C2976;
+  --white: #fff;
+  --whitegray:#F1F1F1;
+  --gray: #D9D9D9;
+  --grayblack: #242424;
+  --black: rgb(0, 0, 0);
+}
 
 input:not([type="checkbox"]) {
 
   width: 250px;
   padding: 7px;
   margin-bottom: 15px;
-  background-color:#D9D9D9;
+  background-color:var(--gray);
   border:none;
   border-radius: 10px;
 
@@ -15,9 +23,9 @@ input:not([type="checkbox"]) {
 input[type="submit"] {
   width: 90px;
   cursor: pointer;
-  color: #5C2976;
-  background-color: #fff;
-  border: 2px solid #5C2976;
+  color: var(--purple);
+  background-color: var(--white);
+  border: 2px solid var(--purple);
   font-size: 13px;
   font-weight: bold;
   border-radius: 20px;
@@ -25,8 +33,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background: #5C2976;
-  color: #ffffff;
+  background: var(--purple);
+  color: var(--white);
 }
 
 .submits
@@ -86,7 +94,7 @@ input[type="submit"]:hover {
 h3 {
   margin-top: 5%;
   font-weight:bold;
-  border-top: #000000;
+  border-top: var(--black)
 }
 
 .tit

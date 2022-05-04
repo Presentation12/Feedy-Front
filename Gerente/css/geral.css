@@ -1,3 +1,12 @@
+:root {
+  --purple: #5C2976;
+  --white: #fff;
+  --whitegray:#F1F1F1;
+  --gray: #D9D9D9;
+  --grayblack: #242424;
+  --black: rgb(0, 0, 0);
+}
+
 * {
     list-style: none;
     text-decoration: none;
@@ -8,7 +17,7 @@
   }
   
   body {
-    background: #ffffff;
+    background: var(--white);
     list-style: none;
     text-decoration: none;
     margin: 0;
@@ -18,7 +27,7 @@
   }
 
   .sidebar {
-    background: #F1F1F1;
+    background: var(--whitegray);
     position: fixed;
     top: 0;
     left: 0;
@@ -40,7 +49,7 @@
   .sidebar ul li a {
     display: block;
     padding: 13px 40px;
-    color: #242424;
+    color: var(--grayblack);
     font-size: 14px;
     font-weight: 600;
     position: relative;
@@ -49,8 +58,8 @@
   
   .sidebar ul li a:hover,
   .sidebar ul li a.active {
-    color: #5C2976;
-    background: #D9D9D9;
+    color: var(--purple);
+    background: var(--gray);
   }
   
   .sidebar ul li a:hover:before,
@@ -75,9 +84,9 @@
     width: 150px;
     height: 130px;
     border-radius: 15px;
-    background-color: #5C2976;
+    background-color: var(--purple);
   
-    color: rgb(255, 255, 255);
+    color: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,7 +113,7 @@
   }
   
   .top_navbar {
-    color: #242424;
+    color: var(--grayblack);
     height: 50px;
     display: flex;
     justify-content: flex-end;
@@ -122,7 +131,7 @@
     position: absolute;
     cursor: pointer;
     right: 0;
-    background-color: #f1f1f1;
+    background-color: var(--whitegray);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -130,7 +139,7 @@
   }
   
   .dropdown-content a {
-    color: black;
+    color: var(--black);
     padding: 12px 16px;
     display: block;
   }
@@ -139,7 +148,7 @@
     display: block;
   }
   .dropdown-content a:hover {
-    background-color: #cacaca;
+    background-color: var(--gray);
     border-radius: 15px 15px 15px 15px;
   }
   
