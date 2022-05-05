@@ -1,0 +1,143 @@
+<!--Design by foolishdeveloper.com-->
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <link rel="stylesheet" href="../css/geral.css">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="shortcut icon" href="../scr/icon.svg" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Feedy</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="section">
+
+        <div class="top_navbar">
+            <a>Nome User</a>
+            <div class="dropdown" style="float:right;">
+                <img src="../scr/gajo.jpg" class="perfil">
+                <div class="dropdown-content">
+                    <a href="perfil.html">Editar Perfil</a>
+                    <a href="#">Pagamentos</a>
+                    <a href="#">Encomendas</a>
+                    <a href="ajuda.html">Ajuda</a>
+                    <a href="definicoes.html">Definições</a>
+                    <a href="../../Login e Registo/html/teste.html">Sair</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <img src="../scr/gajo.jpg" class="foto">
+            <img src="../scr/edit.svg" class="edit">
+            <h3>Informação pessoal</h3>
+            <hr>
+            <div class="inputs">
+                <p class="sub">Nome</p>
+                <input id="nome" type="text" placeholder="Pedro" disabled="true" />
+            </div>
+            <div class="inputs">
+                <p class="sub">Apelido</p>
+                <input id="apelido" type="text" placeholder="Simões" disabled="true" />
+            </div>
+            <div class="inputs">
+                <p class="sub">E-mail</p>
+                <input id="email" type="email" placeholder="playdagame@gmail.com" disabled="true" />
+            </div>
+            <div class="inputs">
+                <p class="sub">Contacto</p>
+                <input id="contacto" type="tel" placeholder="911252433" disabled="true" />
+            </div>
+            <div class="inputs">
+                <p class="sub">Clinica</p>
+                <input type="text" placeholder="S.Pedro" disabled="true" />
+            </div>
+            <div class="inputs">
+                <p class="sub">Código</p>
+                <input type="number" placeholder="12345" disabled="true" />
+            </div>
+            <div class="submits">
+                <input type="submit" class="editar" value="Editar" onclick="editable()" />
+                <input type="submit" value="Guardar" onclick="nonEditable()" />
+            </div>
+
+            <h3 class="tit">Alteração de palavra-passe</h3>
+            <hr>
+
+            <input id="suspender" type="submit" value="Alterar" onclick="insertsPass()">
+            <div class="pass" id="passes">
+                <form>
+                    <div> 
+                        <p class="sub">Palavra-passe</p>
+                        <input id="pass" required="required" type="password" placeholder="Palavra-passe">
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" onclick="mostraPass('pass')">Mostrar
+                    </div>
+                    
+                    <div> 
+                        <p class="sub">Confirmação palavra-passe</p>
+                        <input id="pass2" required="required" type="password" placeholder="Palavra-passe">
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" onclick="mostraPass('pass2')">Mostrar
+                    </div>
+                    <div class="inputs">
+                        <input type="submit" value="Confirmar" onclick="ConfirmDialog()">
+                        <input id="cancelar" type="submit" value="Cancelar" onclick="cancelar()">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <img src="../scr/logo.svg" class="logo">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="item">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="agenda.html">
+                    <span class="item">Agenda</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="item">Animais</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="dicasConteiner">
+
+            <div class="dicas" id="dicas">
+
+                <div class="slider-dica">
+                    <h4>Dica</h4>
+                    <p>Lave o seu cão diariamente</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../js/funcoes.js"></script>
+</body>
+
+</html>

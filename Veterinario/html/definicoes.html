@@ -1,0 +1,167 @@
+<!--Design by foolishdeveloper.com-->
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <link rel="stylesheet" href="../css/geral.css">
+    <link rel="stylesheet" href="../css/definicoes.css">
+    <link rel="shortcut icon" href="../scr/icon.svg" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definições - Feedy</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="section">
+
+        <div class="top_navbar">
+            <a>Nome Vet</a>
+            <div class="dropdown" style="float:right;">
+                <img src="../scr/gajo.jpg" class="perfil">
+                <div class="dropdown-content">
+                    <a href="perfil.html">Editar Perfil</a>
+                    <a href="#">Pagamentos</a>
+                    <a href="#">Encomendas</a>
+                    <a href="ajuda.html">Ajuda</a>
+                    <a href="definicoes.html">Definições</a>
+                    <a href="../../Login e Registo/html/teste.html">Sair</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <h3>Geral</h3>
+            <hr>
+            <div class="checkboxs">
+                <div>
+                    <input type="checkbox">
+                    Modo escuro
+                </div>
+                <div>
+                    <input type="checkbox">
+                    Desativar notificações
+                </div>
+            </div>
+
+            <h3>Informações</h3>
+            <hr>
+            <div class="checkboxs">
+                <div>
+                    Idioma: pt-pt
+                </div>
+                <div class="text">
+
+                    <div class="plano">
+                        <p>Plano</p>
+                        <select id="planoOp" disabled="true" onchange="verifyPlan()">
+                            <option value="---">---</option>
+                            <option value="Free">Free</option>
+                            <option value="Mensal">Mensal</option>
+                            <option value="Anual">Anual</option>
+                        </select>
+                    </div>
+
+                    <div class="metodo" id="metodo">
+                        <p>Metodo de pagamento</p>
+                        <select id="metodoOp" disabled="true">
+                            <option>---</option>
+                            <option>Visa</option>
+                            <option>Multibanco</option>
+                            <option>MbWay</option>
+                            <option>PayPal</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <a>Preço:</a>
+                        <a id="preco">---</a>
+                    </div>
+
+                </div>
+                <div class="inputs">
+                    <input type="submit" value="Alterar" onclick="changePlan()">
+                    <input type="submit" value="Guardar" onclick="savePlan()">
+                </div>
+            </div>
+
+            <h3>Conta</h3>
+            <hr>
+            <div class="checkboxs">
+                <input id="suspender" type="submit" value="Suspender" onclick="insertsPass()">
+                <div class="pass" id="passes">
+                    <form>
+                        <div>
+                            <p class="sub">Nova palavra-passe</p>
+                            <input id="pass" required="required" type="password" placeholder="Palavra-passe">
+                        </div>
+
+                        <div>
+                            <input type="checkbox" onclick="mostraPass('pass')">Mostrar
+                        </div>
+
+                        <div>
+                            <p class="sub">Confirmação palavra-passe</p>
+                            <input id="pass2" required="required" type="password" placeholder="Palavra-passe">
+                        </div>
+
+                        <div>
+                            <input type="checkbox" onclick="mostraPass('pass2')">Mostrar
+                        </div>
+                        <div class="inputs">
+                            <a id="ref" href="../../Login e Registo/html/teste.html">
+                                <input type="submit" value="Confirmar" onclick="ConfirmDialog()">
+                            </a>
+                            <input id="cancelar" type="submit" value="Cancelar" onclick="cancelar()">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="sidebar">
+        <img src="../scr/logo.svg" class="logo">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="item">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="agenda.html">
+                    <span class="item">Agenda</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="item">Animais</span>
+                </a>
+            </li>
+        </ul>
+        <div class="dicasConteiner">
+
+            <div class="dicas" id="dicas">
+
+                <div class="slider-dica">
+                    <h4>Dica</h4>
+                    <p>Lave o seu cão diariamente</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/funcoes.js"></script>
+
+</body>
+
+</html>

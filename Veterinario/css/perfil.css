@@ -21,7 +21,9 @@ input:not([type="checkbox"]) {
 }
 
 input[type="submit"] {
+  margin-top: 10px;
   width: 90px;
+  height: 30px;
   cursor: pointer;
   color: var(--purple);
   background-color: var(--white);
@@ -104,4 +106,14 @@ h3 {
 
 .sub {
   font-size: 14px;
+}
+
+.pass
+{
+  display: none;
+}
+
+.cancelar
+{
+  display: none;
 }

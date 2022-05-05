@@ -28,10 +28,23 @@
       margin-bottom: 70px;
   }
 
+  input:not([type="checkbox"]) {
+
+    width: 250px;
+    padding: 7px;
+    margin-bottom: 15px;
+    background-color:var(--gray);
+    border:none;
+    border-radius: 10px;
+  
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+
   input[type="submit"] {
     margin-top: 10px;
-    width: 80px;
-    height: 25px;
+    width: 90px;
+    height: 30px;
     cursor: pointer;
     color: var(--purple);
     background-color: var(--white);
@@ -39,10 +52,42 @@
     font-size: 13px;
     font-weight: bold;
     border-radius: 20px;
-    margin-bottom: 0;
   }
   
   input[type="submit"]:hover {
     background: var(--purple);
     color: var(--white);
   }
+
+  .text
+{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+select
+{
+  width: 160px;
+  border-radius: 15px;
+}
+
+.sub {
+  font-size: 14px;
+}
+
+.pass
+{
+  display: none;
+}
+
+.cancelar
+{
+  display: none;
+}
+
+.inputs
+{
+  display: flex;
+  gap: 10px;
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <title>Login e Registo</title>
-  <link rel="stylesheet" type="text/css" href="css/teste.css" />
+  <link rel="stylesheet" type="text/css" href="../css/teste.css" />
 </head>
   <body>
       <main>
@@ -14,7 +14,7 @@
                 <div id="login" class="log">
                   <form method="post" action=""> 
 
-                    <img src="imagens/logo.svg" class="logo">
+                    <img src="../scr/logo.svg" class="logo">
 
                     <div class="inputs"> 
                       <input required="required" type="text" placeholder="Codigo clinico"/>   
@@ -22,22 +22,25 @@
 
                     <div class="pass"> 
                       <input id="pass" required="required" type="password" placeholder="Palavra-passe">
-                      <span type="image" onclick="mostraPass()"><img class="eye" src="imagens/eye.png"/span>
+                      <span type="image" onclick="mostraPass()"><img class="eye" src="../scr/eye.png"/span>
                     </div>
                     
-                    <p> 
-                      <input type="submit" value="Entrar" /> 
+                    <p>
+                      <a href="../../Veterinario/html/perfil.html">
+                        <input type="submit" value="Entrar" /> 
+                      </a>
                     </p>
 
                     <div id="recuperarPass"> 
-                      <a href="#recuperarPass">Esqueci-me da palavra passe</a>
+                      <a href="#pararecuperar">Esqueci-me da palavra passe</a>
                     </div>
 
-                    <footer class="link">
-                      Ainda não somos parceiros?
-                      <a href="#pararegisto">Registar</a> 
-                    </footer>
-
+                    <div class="footer">
+                      <div class="link">
+                        Ainda não somos parceiros?
+                        <a href="#pararegisto">Registar</a> 
+                      </div>
+                    </div>
 
                   </form>
                 </div>
@@ -46,7 +49,7 @@
                 <div id="registo" class="reg">
                   <form method="post" action="">
 
-                    <img src="imagens/logo.svg" class="logo">
+                    <img src="../scr/logo.svg" class="logo">
 
                     <div class="inputs"> 
                       <input required="required" type="email" placeholder="E-mail" /> 
@@ -64,13 +67,35 @@
 
                   </form>
                 </div>
+
+              <!--RECUPERAR PASS-->
+              <div id="recuperar" class="reg">
+                <form method="post" action="">
+
+                  <img src="../scr/logo.svg" class="logo">
+
+                  <div class="inputs"> 
+                    <input required="required" type="text" placeholder="Codigo clinico"/>   
+                    <input required="required" type="email" placeholder="E-mail" /> 
+                  </div>
+
+                  <p> 
+                    <input type="submit" value="Enviar" /> 
+                  </p>
+
+                  <footer class="link">
+                    <a href="#paralogin">Voltar</a> 
+                  </footer>
+
+                </form>
+              </div>
           </div>
 
           <div class="content">
-            <img src="imagens/1.png" class="image">
+            <img src="../scr/1.png" class="image">
           </div>
 
       </main>
-      <script src="js/teste.js"></script>
+      <script src="../js/teste.js"></script>
   </body>
 </html>

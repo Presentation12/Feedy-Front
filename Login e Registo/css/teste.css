@@ -36,8 +36,6 @@ main
 
 .log
 {
-  height: 600px;
-  width: 450px;
   background-color: rgba(255, 255, 255);
 }
 
@@ -119,16 +117,21 @@ input[type="submit"]:hover
   border-color: #5C2976;
 }
 
-a[href="#recuperarPass"]
+a
 {
     color: #555555;
     font-size: 12px;
     text-decoration: none;
 }
 
-a[href="#recuperarPass"]:hover
+a:hover
 {
   color:#5C2976;
+}
+
+.footer
+{
+  background-color: #242424;
 }
 
 .link
@@ -165,7 +168,8 @@ a[href="#recuperarPass"]:hover
 }
 
 #registo, 
-#login{
+#login,
+#recuperar{
   position:fixed;
   display: flex;
   justify-content: center;
@@ -189,7 +193,9 @@ a[href="#recuperarPass"]:hover
 
 /* Efeito ao clicar no botão ( Login ) */
 #pararegisto:target ~ .content #registo,
-#paralogin:target ~ .content #login{
+#paralogin:target ~ .content #login,
+#pararecuperar:target ~ .content #recuperar
+{
   z-index: 2;
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
@@ -200,7 +206,9 @@ a[href="#recuperarPass"]:hover
  
 /* Efeito ao clicar no botão ( Registo ) */
 #registro:target ~ .content #login,
-#paralogin:target ~ .content #registo{
+#paralogin:target ~ .content #registo,
+#pararecuperar:target ~ .content #login
+{
   -webkit-animation-name: fadeOutLeft;
   animation-name: fadeOutLeft;
 }
