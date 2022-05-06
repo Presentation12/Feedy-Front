@@ -26,8 +26,7 @@
                 <img src="../scr/gajo.jpg" class="perfil">
                 <div class="dropdown-content">
                     <a href="perfil.html">Editar Perfil</a>
-                    <a href="#">Pagamentos</a>
-                    <a href="#">Encomendas</a>
+                    <a href="#">Prescrições</a>
                     <a href="ajuda.html">Ajuda</a>
                     <a href="definicoes.html">Definições</a>
                     <a href="../../Login e Registo/html/teste.html">Sair</a>
@@ -41,7 +40,7 @@
             <hr>
             <div class="checkboxs">
                 <div>
-                    <input type="checkbox">
+                    <input type="checkbox" onclick="toggleThemeMode()">
                     Modo escuro
                 </div>
                 <div>
@@ -94,33 +93,32 @@
             <h3>Conta</h3>
             <hr>
             <div class="checkboxs">
-                <input id="suspender" type="submit" value="Suspender" onclick="insertsPass()">
+                <input id="buton" type="submit" value="Suspender" onclick="insertsPass()">
                 <div class="pass" id="passes">
-                    <form>
-                        <div>
-                            <p class="sub">Nova palavra-passe</p>
-                            <input id="pass" required="required" type="password" placeholder="Palavra-passe">
-                        </div>
+                    <div>
+                        <p class="sub">Nova palavra-passe</p>
+                        <input id="pass" type="password" placeholder="Palavra-passe">
+                    </div>
 
-                        <div>
-                            <input type="checkbox" onclick="mostraPass('pass')">Mostrar
-                        </div>
+                    <div>
+                        <input type="checkbox" onclick="mostraPass('pass')">Mostrar
+                    </div>
 
-                        <div>
-                            <p class="sub">Confirmação palavra-passe</p>
-                            <input id="pass2" required="required" type="password" placeholder="Palavra-passe">
-                        </div>
+                    <div>
+                        <p class="sub">Confirmação palavra-passe</p>
+                        <input id="pass2" type="password" placeholder="Palavra-passe">
+                    </div>
 
-                        <div>
-                            <input type="checkbox" onclick="mostraPass('pass2')">Mostrar
-                        </div>
-                        <div class="inputs">
-                            <a id="ref" href="../../Login e Registo/html/teste.html">
-                                <input type="submit" value="Confirmar" onclick="ConfirmDialog()">
-                            </a>
-                            <input id="cancelar" type="submit" value="Cancelar" onclick="cancelar()">
-                        </div>
-                    </form>
+                    <div>
+                        <input type="checkbox" onclick="mostraPass('pass2')">Mostrar
+                    </div>
+                    <div class="inputs">
+                        <a id="ref" href="../../Login e Registo/html/teste.html">
+                            <input type="submit" value="Confirmar" onclick="ConfirmDialog()">
+                        </a>
+                        <input id="cancelar" type="submit" value="Cancelar" onclick="cancelar()">
+                    </div>
+
                 </div>
             </div>
 
@@ -137,7 +135,7 @@
                 </a>
             </li>
             <li>
-                <a href="agenda.html">
+                <a href="#">
                     <span class="item">Agenda</span>
                 </a>
             </li>

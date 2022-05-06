@@ -35,66 +35,82 @@ function savePlan() {
   document.getElementById("metodoOp").disabled = true;
 }
 
-
-// TODO
-function verifiyPlan() 
-{
+function verifyPlan() {
   tipoPlano = document.getElementById("planoOp").value;
-  m = document.getElementsByClassName("metodo");
-  //tipoMetodo = document.getElementById("metodoOp").CONTEUDOATUAL;
-  preco = document.getElementById("preco").textContent;
+
+  m = document.getElementById("metodo");
+  tipoMetodo = document.getElementById("metodoOp");
+  preco = document.getElementById("preco");
 
   if (tipoPlano == "---") {
-    alert("ola");
-    preco = "---";
-    //tipoMetodo = "---";
+    preco.innerHTML = "---";
+    tipoMetodo.value = "---";
+    m.style.display = "block";
   }
   if (tipoPlano == "Free") {
-    preco = "Gratuito";
+    preco.innerHTML = "Gratuito";
     m.style.display = "none";
   }
   if (tipoPlano == "Mensal") {
-    preco = "1.99 €/Mês";
-    //tipoMetodo = "---";
+    preco.innerHTML = "1.99 €/Mês";
+    tipoMetodo.value = "---";
+    m.style.display = "block";
   }
   if (tipoPlano == "Anual") {
-    preco = "17.99 €/Ano";
-    //tipoMetodo = "---";
+    preco.innerHTML = "17.99 €/Ano";
+    tipoMetodo.value = "---";
+    m.style.display = "block";
   }
 }
 
-function insertsPass()
-{
-  document.getElementById("suspender").style.display="none";
-  document.getElementById("cancelar").style.display="block";
-  document.getElementById("passes").style.display="block";
+function insertsPass() {
+  document.getElementById("buton").style.display = "none";
+  document.getElementById("passes").style.display = "block";
 }
 
-function cancelar()
-{
-  document.getElementById("passes").style.display="none";
-  document.getElementById("suspender").style.display="block";
+function cancelar() {
+  document.getElementById("passes").style.display = "none";
+  document.getElementById("buton").style.display = "block";
 }
 
 
-function ConfirmDialog()  {
+function ConfirmDialog() {
 
   var result = confirm("Deseja continuar a sua ação?");
-  document.getElementById("ref").href="../../Login e Registo/html/teste.html";
+  document.getElementById("ref").href = "../../Login e Registo/html/teste.html";
   pass1 = document.getElementById("pass").value;
   pass2 = document.getElementById("pass2").value;
-
-  if(result && (pass1 == pass2))  
+ 
+  if (result && (pass1 == pass2) && (pass1 != "") && (pass2 != "")) 
   {
-      alert("Sucesso!");
+    alert("Sucesso!");
   }
-  else if(pass1 != pass2)
-  {
+  else if (pass1 != pass2) {
     alert("Passwords não equivalentes!");
-    document.getElementById("ref").href="#";
+    document.getElementById("ref").href = "#";
   }
-  else
-  {
-    document.getElementById("ref").href="#";
+  else {
+    document.getElementById("ref").href = "#";
   }
 }
+
+function toggleThemeMode() {
+  temaAtual = document.documentElement.getAttribute("tema");
+  temaNovo = "escuro";
+
+  if (temaAtual === "escuro") {
+    temaNovo = "claro";
+  }
+
+  document.documentElement.setAttribute('tema', temaNovo);
+  localStorage.setItem('theme', temaNovo);
+}
+
+document.getElementById("pop-up").addEventListener("submit", (e) => {
+  e.preventDefault();
+  swal({
+    title: "Sucesso",
+    icon: "success",
+    button: "Continuar",
+  });
+})

@@ -1,0 +1,214 @@
+<!--Design by foolishdeveloper.com-->
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <link rel="stylesheet" href="../css/geral.css">
+    <link rel="stylesheet" href="../css/estabelecimentos.css">
+    <link rel="shortcut icon" href="../scr/icon.svg" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda - Feedy</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="section">
+
+        <div class="top_navbar">
+            <a>Nome User</a>
+            <div class = "dropdown" style="float:right;">
+                <img src="../scr/gajo.jpg" class="perfil">
+                <div class="dropdown-content">
+                    <a href="#">Editar Perfil</a>
+                    <a href="#">Pagamentos</a>
+                    <a href="#">Historico Serviços</a>
+                    <a href="#">Encomendas</a>
+                    <a href="#">Definições</a>
+                    <a href="#">Ajuda</a>
+                    <a href="#">Sair</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            
+                <div class="filters">
+                    <a>Nome</a>
+                    <input type="text" placeholder="Nome" class="barra"/>
+                    <a>Tipo</a>
+                    <select id="tipoOp">
+                        <option value="---">---</option>
+                        <option value="Clinica">Clinica</option>
+                        <option value="Escola">Escola</option>
+                        <option value="Hotel">Hotel</option>
+                    </select>
+                    <a>Distrito</a>
+                    <select id="distritoOp" >
+                        <option value="---">---</option>
+                        <option value="Braga">Braga</option>
+                        <option value="Porto">Porto</option>
+                        <option value="Lisboa">Lisboa</option>
+                        <option value="Algarve">Algarve</option>
+                    </select>
+                    <input type="submit" value="Pesquisar" id="filtro" />
+            </div>
+        
+            
+            <table class = "table">
+                <thead>
+                    <tr>
+                        <th>
+                        </th>
+                        <th>
+                            Tipo
+                        </th>
+                        <th>
+                            Nome
+                        </th>
+                        <th>
+                            Distrito
+                        </th>
+                        <th>
+                            Código-Postal
+                        </th>
+                        <th>
+                            Contacto
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class ="bodytable">
+                    <tr class ="lineTable">
+                        <td>
+                            <img src="../scr/hotel.png" class="estab">
+                        </td>
+                        <td class="tipo">Hotel</td>
+                        <td class="nome">S. João</td>
+                        <td class="distrito">Braga</td>
+                        <td>4715-123</td>
+                        <td>930998789</td>
+                    </tr>
+                    <tr class ="lineTable">
+                        <td>
+                            <img src="../scr/hotel.png" class="estab">
+                        </td>
+                        <td class="tipo">Hotel</td>
+                        <td class="nome">Spa & Hotel</td>
+                        <td class="distrito">Porto</td>
+                        <td>4710-120</td>
+                        <td>254223445</td>
+                    </tr>
+                    <tr class ="lineTable">
+                        <td>
+                            <img src="../scr/hotel.png" class="estab">
+                        </td>
+                        <td class="tipo">Hotel</td>
+                        <td class="nome">Natureza animal</td>
+                        <td class="distrito">Lisboa</td>
+                        <td>4330-100</td>
+                        <td>245200300</td>
+                    </tr>
+                    <tr class ="lineTable">
+                        <td>
+                            <img src="../scr/hotel.png" class="estab">
+                        </td>
+                        <td class="tipo">Hotel</td>
+                        <td class="nome">Flor e Mar</td>
+                        <td class="distrito">Algarve</td>
+                        <td>4100-077</td>
+                        <td>969080765</td>
+                    </tr>
+                    <tr class ="lineTable">
+                        <td>
+                            <img src="../scr/escola.jpg" class="estab">
+                        </td>
+                        <td class="tipo">Escola</td>
+                        <td class="nome">Escola canica</td>
+                        <td class="distrito">Porto</td>
+                        <td>4715-077</td>
+                        <td>253678900</td>
+                    </tr>
+                    <tr class ="lineTable">
+                        <td>
+                            <img src="../scr/escola.jpg" class="estab">
+                        </td>
+                        <td class="tipo">Escola</td>
+                        <td class="nome">Dogland</td>
+                        <td class="distrito">Braga</td>
+                        <td>4705-000</td>
+                        <td>912707639</td>
+                    </tr>
+                    <tr class ="lineTable">
+                        <td>
+                            <img src="../scr/clinica.jpg" class="estab">
+                        </td>
+                        <td class="tipo">Clinica</td>
+                        <td class="nome">Vita Animal</td>
+                        <td class="distrito">Algarve</td>
+                        <td>4105-005</td>
+                        <td>933400500</td>
+                    </tr>
+                    <tr class ="lineTable">
+                        <td>
+                            <img src="../scr/clinica.jpg" class="estab">
+                        </td>
+                        <td class="tipo">Clinica</td>
+                        <td class="nome">DogHealth</td>
+                        <td class="distrito">Lisboa</td>
+                        <td>4705-504</td>
+                        <td>253440550</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="sidebar">
+        <img src="../scr/logo.svg" class="logo">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="item">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="item">Gerir Animais</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="item">Serviços</span>
+                </a>
+            </li>
+            <li>
+                <a href="estabelecimentos.html">
+                    <span class="item">Estabelecimentos</span>
+                </a>
+            </li>
+        </ul>
+        <div class="dicasConteiner">
+
+            <div class="dicas" id="dicas">
+
+                <div class="slider-dica">
+                    <h4>Dica</h4>
+                    <p>Lave o seu cão diariamente</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/functions.js"></script>
+
+</body>
+
+</html>
