@@ -1,4 +1,3 @@
-
 filter = document.getElementById("filtro");
 rows = document.querySelectorAll(".lineTable");
 searchInput = document.querySelector(".barra");
@@ -14,51 +13,52 @@ filter.addEventListener("click", () => {
         //quando se escolhe os dois filtros ou ambos estao limpos = "---"
         if ((row.querySelector(".tipo").textContent == tipo
             && row.querySelector(".distrito").textContent == distrito)
-            || (tipo == "---" && distrito == "---")) 
-        {
+            || (tipo == "---" && distrito == "---")) {
             //barra de pesquisa
-            if (row.querySelector(".nome").textContent.toLowerCase().startsWith(text)) 
-            {
+            if (row.querySelector(".nome").textContent.toLowerCase().startsWith(text)) {
                 row.style.display = "";
             }
-            else 
-            {
+            else {
                 row.style.display = "none";
             }
         }
 
         //quando nao se escolhe distrito, apenas tipo
-        else if (row.querySelector(".tipo").textContent == tipo && distrito == "---") 
-        {
+        else if (row.querySelector(".tipo").textContent == tipo && distrito == "---") {
             //barra de pesquisa
-            if (row.querySelector(".nome").textContent.toLowerCase().startsWith(text)) 
-            {
+            if (row.querySelector(".nome").textContent.toLowerCase().startsWith(text)) {
                 row.style.display = "";
             }
-            else 
-            {
+            else {
                 row.style.display = "none";
             }
         }
 
         //quando nao se escolhe tipo, apenas distrito
-        else if (row.querySelector(".distrito").textContent == distrito && tipo == "---") 
-        {
+        else if (row.querySelector(".distrito").textContent == distrito && tipo == "---") {
             //barra de pesquisa
-            if (row.querySelector(".nome").textContent.toLowerCase().startsWith(text)) 
-            {
+            if (row.querySelector(".nome").textContent.toLowerCase().startsWith(text)) {
                 row.style.display = "";
             }
-            else 
-            {
+            else {
                 row.style.display = "none";
             }
         }
 
         //quando nao existe o filtro
-        else 
-        {
+        else {
             row.style.display = "none";
         }
     })
 })
+
+rows.forEach(row => {
+    row.addEventListener("click", () => {
+
+        swal({
+            title: "Detalhes",
+            text: row.textContent,
+            button: 'Ok'
+        });
+    })
+});

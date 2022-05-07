@@ -16,6 +16,9 @@ function editable() {
   document.getElementById("apelido").disabled = false;
   document.getElementById("email").disabled = false;
   document.getElementById("contacto").disabled = false;
+
+  document.getElementById("alterar").style.display = "none";
+  document.getElementById("editar").style.display = "block";
 }
 
 function nonEditable() {
@@ -23,6 +26,9 @@ function nonEditable() {
   document.getElementById("apelido").disabled = true;
   document.getElementById("email").disabled = true;
   document.getElementById("contacto").disabled = true;
+
+  document.getElementById("alterar").style.display = "block";
+  document.getElementById("editar").style.display = "none";
 }
 
 function changePlan() {
@@ -73,16 +79,14 @@ function cancelar() {
   document.getElementById("buton").style.display = "block";
 }
 
-
 function ConfirmDialog() {
 
   var result = confirm("Deseja continuar a sua ação?");
   document.getElementById("ref").href = "../../Login e Registo/html/teste.html";
   pass1 = document.getElementById("pass").value;
   pass2 = document.getElementById("pass2").value;
- 
-  if (result && (pass1 == pass2) && (pass1 != "") && (pass2 != "")) 
-  {
+
+  if (result && (pass1 == pass2) && (pass1 != "") && (pass2 != "")) {
     alert("Sucesso!");
   }
   else if (pass1 != pass2) {
@@ -106,11 +110,50 @@ function toggleThemeMode() {
   localStorage.setItem('theme', temaNovo);
 }
 
-document.getElementById("pop-up").addEventListener("submit", (e) => {
-  e.preventDefault();
-  swal({
-    title: "Sucesso",
-    icon: "success",
-    button: "Continuar",
-  });
+buttons = document.querySelectorAll(".confirmar");
+
+buttons.forEach(button => {
+
+  button.addEventListener("click", () => {
+    swal({
+      title: 'Sucesso',
+      icon: 'success',
+    });
+  })
+})
+
+buttons = document.querySelectorAll(".cancelar");
+
+buttons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    swal({
+      title: 'Cancelado',
+      icon: 'warning',
+    });
+  })
+})
+
+buttons = document.querySelectorAll(".submeter");
+
+buttons.forEach(button => {
+
+  button.addEventListener("click", () => {
+    if (document.getElementById("assunto").value != "" && document.getElementById("descricao").value != "") 
+    {
+      swal({
+        title: 'Submetido',
+        icon: 'success'
+      });
+    }
+    else
+    {
+      swal({
+        title: 'Erro',
+        text: 'Campos em falta',
+        icon: 'error'
+      });
+    }
+  })
 })

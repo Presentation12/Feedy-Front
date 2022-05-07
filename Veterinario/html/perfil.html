@@ -64,9 +64,11 @@
                 <p class="sub">Código</p>
                 <input type="number" placeholder="12345" disabled="true" />
             </div>
-            <div class="submits">
-                <input type="submit" value="Editar" onclick="editable()" />
-                <input type="submit" value="Guardar" onclick="nonEditable()" />
+
+            <input id="alterar" type="submit" value="Alterar" onclick="editable()" />
+            <div id="editar" class="editar">
+                <input class="confirmar" type="submit" value="Confirmar" onclick="nonEditable()" />
+                <input class="cancelar" type="submit" value="Cancelar" onclick="nonEditable()" />
             </div>
 
             <h3 class="tit">Alteração de palavra-passe</h3>
@@ -92,8 +94,8 @@
                     <input type="checkbox" onclick="mostraPass('pass2')">Mostrar
                 </div>
                 <div class="submits">
-                    <input type="submit" value="Confirmar" onclick="cancelar()">
-                    <input id="cancelar" type="submit" value="Cancelar" onclick="cancelar()">
+                    <input class="confirmar" type="submit" value="Confirmar" onclick="cancelar()">
+                    <input class="cancelar" id="cancelar" type="submit" value="Cancelar" onclick="cancelar()">
                 </div>
             </div>
 
@@ -120,20 +122,9 @@
             </li>
         </ul>
 
-        <div class="dicasConteiner">
-
-            <div class="dicas" id="dicas">
-
-                <div class="slider-dica">
-                    <h4>Dica</h4>
-                    <p>Lave o seu cão diariamente</p>
-                </div>
-
-            </div>
-        </div>
-
     </div>
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="../js/funcoes.js"></script>
 
 </body>

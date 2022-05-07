@@ -22,29 +22,27 @@
 
         <div class="top_navbar">
             <a>Nome Vet</a>
-            <div class = "dropdown" style="float:right;">
+            <div class="dropdown" style="float:right;">
                 <img src="../scr/gajo.jpg" class="perfil">
                 <div class="dropdown-content">
                     <a href="perfil.html">Editar Perfil</a>
                     <a href="#">Prescrições</a>
                     <a href="ajuda.html">Ajuda</a>
                     <a href="definicoes.html">Definições</a>
-                    <a href="../../Login e Registo/html/teste.html">Sair</a> 
+                    <a href="../../Login e Registo/html/teste.html">Sair</a>
                 </div>
             </div>
         </div>
 
         <div class="container">
-            <h1>Ajuda</h1> 
-            <form>
-                <div class="inputs">
-                    <input type="text" placeholder="Assunto" required/>  
-                </div>
-                <textarea required placeholder="Descreva o problema ..."></textarea>
-                <div class="submits">
-                    <input type="submit" value="Submeter"/> 
-                </div>
-            </form>  
+            <h1>Ajuda</h1>
+            <div class="inputs">
+                <input id="assunto" type="text" placeholder="Assunto" />
+            </div>
+            <textarea id="descricao" placeholder="Descreva o problema ..."></textarea>
+            <div class="submits">
+                <input class="submeter" type="submit" value="Submeter" />
+            </div>
         </div>
 
     </div>
@@ -68,19 +66,10 @@
                 </a>
             </li>
         </ul>
-        <div class="dicasConteiner">
 
-            <div class="dicas" id="dicas">
-
-                <div class="slider-dica">
-                    <h4>Dica</h4>
-                    <p>Lave o seu cão diariamente</p>
-                </div>
-
-            </div>
-        </div>
     </div>
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="../js/funcoes.js"></script>
 
 </body>

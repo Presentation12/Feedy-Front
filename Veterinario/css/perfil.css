@@ -7,17 +7,28 @@
   --black: rgb(0, 0, 0);
 }
 
-input:not([type="checkbox"]) {
-
+input:not([type="checkbox"])
+{
   width: 250px;
   padding: 7px;
   margin-bottom: 15px;
   background-color:var(--gray);
   border:none;
   border-radius: 10px;
+}
 
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+input:not([type="checkbox"]):disabled
+{
+  background-color:var(--gray);
+  border:none;
+  transition: 1s;
+}
+
+input:not([type="checkbox"]):enabled
+{
+  background-color: #fff;
+  border: 1px solid #242424;
+  transition: 1s;
 }
 
 input[type="submit"] {
@@ -39,7 +50,8 @@ input[type="submit"]:hover {
   color: var(--white);
 }
 
-.submits
+.submits,
+.editar
 {
   display: flex;
   align-items: center;
@@ -104,7 +116,9 @@ h3 {
   font-size: 14px;
 }
 
-.pass
+.pass,
+.editar
 {
   display: none;
 }
+

@@ -86,7 +86,7 @@
                 </div>
                 <div class="inputs">
                     <input type="submit" value="Alterar" onclick="changePlan()">
-                    <input type="submit" value="Guardar" onclick="savePlan()">
+                    <input class="confirmar" type="submit" value="Confirmar" onclick="savePlan()">
                 </div>
             </div>
 
@@ -116,7 +116,7 @@
                         <a id="ref" href="../../Login e Registo/html/teste.html">
                             <input type="submit" value="Confirmar" onclick="ConfirmDialog()">
                         </a>
-                        <input id="cancelar" type="submit" value="Cancelar" onclick="cancelar()">
+                        <input class="cancelar" type="submit" value="Cancelar" onclick="cancelar()">
                     </div>
 
                 </div>
@@ -145,19 +145,9 @@
                 </a>
             </li>
         </ul>
-        <div class="dicasConteiner">
-
-            <div class="dicas" id="dicas">
-
-                <div class="slider-dica">
-                    <h4>Dica</h4>
-                    <p>Lave o seu cão diariamente</p>
-                </div>
-
-            </div>
-        </div>
     </div>
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" ></script>
     <script src="../js/funcoes.js"></script>
 
 </body>

@@ -66,43 +66,6 @@
   .sidebar ul li a.active:before {
     display: block;
   }
-  
-  .dicasConteiner
-  {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    padding-bottom: 30px;
-    display: flex;
-    justify-content:center;
-    align-items:flex-end;
-  }
-  
-  .dicas
-  {
-    width: 150px;
-    height: 130px;
-    border-radius: 15px;
-    background-color: var(--purple);
-  
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .slider-dica h4
-  {
-    font-weight: 600;
-  }
-  
-  .slider-dica p
-  {
-    padding-top: 10px;
-    font-size: 14px;
-  }
 
   /*TOP BAR*/
 

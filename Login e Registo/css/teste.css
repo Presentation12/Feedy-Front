@@ -193,8 +193,7 @@ a:hover
 
 /* Efeito ao clicar no botão ( Login ) */
 #pararegisto:target ~ .content #registo,
-#paralogin:target ~ .content #login,
-#pararecuperar:target ~ .content #recuperar
+#paralogin:target ~ .content #login
 {
   z-index: 2;
   -webkit-animation-name: fadeInLeft;
@@ -206,8 +205,7 @@ a:hover
  
 /* Efeito ao clicar no botão ( Registo ) */
 #registro:target ~ .content #login,
-#paralogin:target ~ .content #registo,
-#pararecuperar:target ~ .content #login
+#paralogin:target ~ .content #registo
 {
   -webkit-animation-name: fadeOutLeft;
   animation-name: fadeOutLeft;
