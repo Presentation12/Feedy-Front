@@ -2,6 +2,7 @@ filter = document.getElementById("filtro");
 rows = document.querySelectorAll(".lineTable");
 searchInput = document.querySelector(".barra");
 
+// Ao clicar no butao com id filtro este faz com que so aparecam as linhas que contenham o distrito, tipo e o que é escrito na barra de pesquisa
 filter.addEventListener("click", () => {
 
     tipo = document.getElementById("tipoOp").value;
@@ -52,6 +53,7 @@ filter.addEventListener("click", () => {
     })
 })
 
+// mensagem com os detalhes do estabelecimento ao clicar numa linha
 rows.forEach(row => {
     row.addEventListener("click", () => {
 

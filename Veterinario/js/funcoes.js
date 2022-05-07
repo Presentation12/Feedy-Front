@@ -1,3 +1,4 @@
+// visualizar password
 function mostraPass(pass) {
 
   var x = document.getElementById(pass);
@@ -11,6 +12,7 @@ function mostraPass(pass) {
   }
 }
 
+// torna editavel determinados campos do perfil veterinario para edição alem de ficar visivel os botoes de guardar e cancelar e invisivel o de alterar
 function editable() {
   document.getElementById("nome").disabled = false;
   document.getElementById("apelido").disabled = false;
@@ -21,6 +23,7 @@ function editable() {
   document.getElementById("editar").style.display = "block";
 }
 
+// torna não editavel determinados campos do perfil veterinario alem de ficar invisivel os botoes de guardar e cancelar e visivel o de alterar
 function nonEditable() {
   document.getElementById("nome").disabled = true;
   document.getElementById("apelido").disabled = true;
@@ -31,16 +34,19 @@ function nonEditable() {
   document.getElementById("editar").style.display = "none";
 }
 
+// ao clicar para editar plano tornam se editaveis as select boxes
 function changePlan() {
   document.getElementById("planoOp").disabled = false;
   document.getElementById("metodoOp").disabled = false
 }
 
+// ao clicar para guardar plano tornam se não editaveis as select boxes
 function savePlan() {
   document.getElementById("planoOp").disabled = true;
   document.getElementById("metodoOp").disabled = true;
 }
 
+// alteraçoes na div e campo do metodo e campo preco, dependendo dos campos selecionados no metodo e plano
 function verifyPlan() {
   tipoPlano = document.getElementById("planoOp").value;
 
@@ -69,16 +75,21 @@ function verifyPlan() {
   }
 }
 
+// torna visivel as caixas para inserção de password e butao de cancelkar e confirmar
+// torna invisivel butao de alterar
 function insertsPass() {
   document.getElementById("buton").style.display = "none";
   document.getElementById("passes").style.display = "block";
 }
 
+// torna invisivel as caixas para inserção de password e butao de cancelkar e confirmar
+// torna visivel butao de alterar
 function cancelar() {
   document.getElementById("passes").style.display = "none";
   document.getElementById("buton").style.display = "block";
 }
 
+// confirmaçao de suspenção de conta
 function ConfirmDialog() {
 
   var result = confirm("Deseja continuar a sua ação?");
@@ -98,6 +109,7 @@ function ConfirmDialog() {
   }
 }
 
+// Alternar entre modo escuro e claro da pagina
 function toggleThemeMode() {
   temaAtual = document.documentElement.getAttribute("tema");
   temaNovo = "escuro";
@@ -110,8 +122,9 @@ function toggleThemeMode() {
   localStorage.setItem('theme', temaNovo);
 }
 
-buttons = document.querySelectorAll(".confirmar");
 
+// Busca todos os butoes confirmar e caso seja clicado este mostra uma mensagem
+buttons = document.querySelectorAll(".confirmar");
 buttons.forEach(button => {
 
   button.addEventListener("click", () => {
@@ -122,8 +135,8 @@ buttons.forEach(button => {
   })
 })
 
+// Busca todos os butoes cancelar e caso seja clicado este mostra uma mensagem
 buttons = document.querySelectorAll(".cancelar");
-
 buttons.forEach(button => {
 
   button.addEventListener("click", () => {
@@ -135,8 +148,8 @@ buttons.forEach(button => {
   })
 })
 
+// Busca todos os butoes submeter e caso seja clicado este mostra uma mensagem
 buttons = document.querySelectorAll(".submeter");
-
 buttons.forEach(button => {
 
   button.addEventListener("click", () => {
@@ -156,4 +169,19 @@ buttons.forEach(button => {
       });
     }
   })
+})
+
+// Busca o butao submeter e caso seja clicado e os campos de texto estejam preenchidos este mostra uma mensagem
+document.getElementById("submeter").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (document.getElementById("assunto").value != "" && document.getElementById("descricao").value != "") {
+    document.getElementById("show").style.display="block";
+  }
+})
+
+// Busca o butao ok e caso seja clicado torna invisivel a mensagem e da refresh na pagina
+document.getElementById("ok").addEventListener("click", () => {
+  document.getElementById("show").style.display="none";
+  document.querySelector(".help").submit();
 })

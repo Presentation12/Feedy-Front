@@ -1,41 +1,48 @@
 <!DOCTYPE html>
+
 <head>
-  <title>Login e Registo</title>
   <link rel="stylesheet" type="text/css" href="../css/teste.css" />
+  <link rel="shortcut icon" href="../scr/icon.svg" />
+  <title>Login e Registo</title>
 </head>
-  <body>
-      <main>
 
-        <div class="content">   
+<body>
+  <main>
 
-              <!--RECUPERAR PASS-->
-              <div id="recuperar" class="reg">
-                <form method="post" action="">
+    <div class="content">
 
-                  <img src="../scr/logo.svg" class="logo">
+      <div id="recuperar" class="reg">
+        <form class="help">
 
-                  <div class="inputs"> 
-                    <input required="required" type="text" placeholder="Codigo clinico"/>   
-                    <input required="required" type="email" placeholder="E-mail" /> 
-                  </div>
+          <img src="../scr/logo.svg" class="logo">
 
-                  <p> 
-                    <input type="submit" value="Enviar" /> 
-                  </p>
-
-                  <footer class="link">
-                    <a href="teste.html">Voltar</a> 
-                  </footer>
-
-                </form>
-              </div>
+          <div class="inputs">
+            <input id="codigo" required="required" type="text" placeholder="Codigo clinico" />
+            <input id="email" required="required" type="email" placeholder="E-mail" />
           </div>
 
-          <div class="content">
-            <img src="../scr/1.png" class="image">
-          </div>
+          <p>
+            <input id="submeter" type="submit" value="Submeter" />
+          </p>
 
-      </main>
-      <script src="../js/teste.js"></script>
-  </body>
+          <footer class="link">
+            <a href="teste.html">Voltar</a>
+          </footer>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="content">
+      <img src="../scr/1.png" class="image">
+    </div>
+
+    </div>
+
+  </main>
+
+  <script src="../js/teste.js"></script>
+
+</body>
+
 </html>

@@ -1,79 +1,81 @@
 <!DOCTYPE html>
+
 <head>
-  <title>Login e Registo</title>
   <link rel="stylesheet" type="text/css" href="../css/teste.css" />
+  <link rel="shortcut icon" href="../scr/icon.svg" />
+  <title>Login e Registo</title>
 </head>
-  <body>
-      <main>
-        <a class="links" id="pararegisto"></a>
-        <a class="links" id="paralogin"></a>
 
-        <div class="content">   
+<body>
+  <main>
+    <a class="links" id="paralogin"></a>
+    <a class="links" id="pararegisto"></a>
 
-            <!--LOGIN-->
-                <div id="login" class="log">
-                  <form method="post" action=""> 
+    <div class="content">
 
-                    <img src="../scr/logo.svg" class="logo">
+      <!--LOGIN-->
+      <div id="login" class="log">
+        <form action="../../Veterinario/html/perfil.html">
 
-                    <div class="inputs"> 
-                      <input required="required" type="text" placeholder="Codigo clinico"/>   
-                    </div>
+          <img src="../scr/logo.svg" class="logo">
 
-                    <div class="pass"> 
-                      <input id="pass" required="required" type="password" placeholder="Palavra-passe">
-                      <span type="image" onclick="mostraPass()"><img class="eye" src="../scr/eye.png"/span>
-                    </div>
-                    
-                    <p>
-                      <a href="../../Veterinario/html/perfil.html">
-                        <input type="submit" value="Entrar" /> 
-                      </a>
-                    </p>
-
-                    <div id="recuperarPass"> 
-                      <a href="recuperar.html">Esqueci-me da palavra passe</a>
-                    </div>
-
-                    <div class="footer">
-                      <div class="link">
-                        Ainda não somos parceiros?
-                        <a href="#pararegisto">Registar</a> 
-                      </div>
-                    </div>
-
-                  </form>
-                </div>
-
-            <!--REGISTO-->
-                <div id="registo" class="reg">
-                  <form method="post" action="">
-
-                    <img src="../scr/logo.svg" class="logo">
-
-                    <div class="inputs"> 
-                      <input required="required" type="email" placeholder="E-mail" /> 
-                      <input required="required" type="tel" placeholder="Contacto"/>
-                    </div>
-
-                    <p> 
-                      <input type="submit" value="Registar" /> 
-                    </p>
-
-                    <footer class="link">
-                      Jà somos parceiros?
-                      <a href="#paralogin">Login</a> 
-                    </footer>
-
-                  </form>
-                </div>
+          <div class="inputs">
+            <input required="required" type="text" placeholder="Codigo clinico" />
           </div>
 
-          <div class="content">
-            <img src="../scr/1.png" class="image">
+          <div class="pass">
+            <input id="pass" required="required" type="password" placeholder="Palavra-passe">
+            <span type="image" onclick="mostraPass()"><img class="eye" src="../scr/eye.png">
           </div>
 
-      </main>
-      <script src="../js/teste.js"></script>
-  </body>
+          <p>
+            <input type="submit" value="Entrar" />
+          </p>
+
+          <div id="recuperarPass">
+            <a href="recuperar.html">Esqueci-me da palavra passe</a>
+          </div>
+
+          <div class="footer">
+            <div class="link">
+              Ainda não somos parceiros?
+              <a href="#pararegisto">Registar</a>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <!--REGISTO-->
+      <div id="registo" class="reg">
+        <form>
+
+          <img src="../scr/logo.svg" class="logo">
+
+          <div class="inputs">
+            <input required="required" type="email" placeholder="E-mail" />
+            <input required="required" type="tel" placeholder="Contacto" />
+          </div>
+
+          <p>
+            <input type="submit" value="Registar" />
+          </p>
+
+          <footer class="link">
+            Jà somos parceiros?
+            <a href="#paralogin">Login</a>
+          </footer>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="content">
+      <img src="../scr/1.png" class="image">
+    </div>
+
+  </main>
+  <script src="../js/teste.js"></script>
+</body>
+
 </html>
